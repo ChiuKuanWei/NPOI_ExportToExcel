@@ -266,5 +266,10 @@ namespace EXCEL_Export
             //}
         }
         #endregion
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

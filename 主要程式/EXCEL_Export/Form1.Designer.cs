@@ -37,14 +37,14 @@
             this.btnMerge = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dlg1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnSelect1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtPath2 = new System.Windows.Forms.TextBox();
+            this.txtPath1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSelect2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSelect1 = new System.Windows.Forms.Button();
+            this.dlg1 = new System.Windows.Forms.OpenFileDialog();
             this.dlg2 = new System.Windows.Forms.OpenFileDialog();
-            this.txtPath1 = new System.Windows.Forms.TextBox();
-            this.txtPath2 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -131,28 +131,21 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "合併檔案";
             // 
-            // dlg1
+            // txtPath2
             // 
-            this.dlg1.FileName = "openFileDialog1";
+            this.txtPath2.Location = new System.Drawing.Point(33, 115);
+            this.txtPath2.Name = "txtPath2";
+            this.txtPath2.ReadOnly = true;
+            this.txtPath2.Size = new System.Drawing.Size(327, 22);
+            this.txtPath2.TabIndex = 27;
             // 
-            // btnSelect1
+            // txtPath1
             // 
-            this.btnSelect1.Location = new System.Drawing.Point(193, 21);
-            this.btnSelect1.Name = "btnSelect1";
-            this.btnSelect1.Size = new System.Drawing.Size(73, 24);
-            this.btnSelect1.TabIndex = 22;
-            this.btnSelect1.Text = "請選擇檔案";
-            this.btnSelect1.UseVisualStyleBackColor = true;
-            this.btnSelect1.Click += new System.EventHandler(this.btnSelect1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(125, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 12);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "合併檔案1:";
+            this.txtPath1.Location = new System.Drawing.Point(33, 51);
+            this.txtPath1.Name = "txtPath1";
+            this.txtPath1.ReadOnly = true;
+            this.txtPath1.Size = new System.Drawing.Size(327, 22);
+            this.txtPath1.TabIndex = 26;
             // 
             // label2
             // 
@@ -173,25 +166,32 @@
             this.btnSelect2.UseVisualStyleBackColor = true;
             this.btnSelect2.Click += new System.EventHandler(this.btnSelect2_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(125, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 12);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "合併檔案1:";
+            // 
+            // btnSelect1
+            // 
+            this.btnSelect1.Location = new System.Drawing.Point(193, 21);
+            this.btnSelect1.Name = "btnSelect1";
+            this.btnSelect1.Size = new System.Drawing.Size(73, 24);
+            this.btnSelect1.TabIndex = 22;
+            this.btnSelect1.Text = "請選擇檔案";
+            this.btnSelect1.UseVisualStyleBackColor = true;
+            this.btnSelect1.Click += new System.EventHandler(this.btnSelect1_Click);
+            // 
+            // dlg1
+            // 
+            this.dlg1.FileName = "openFileDialog1";
+            // 
             // dlg2
             // 
             this.dlg2.FileName = "openFileDialog1";
-            // 
-            // txtPath1
-            // 
-            this.txtPath1.Location = new System.Drawing.Point(33, 51);
-            this.txtPath1.Name = "txtPath1";
-            this.txtPath1.ReadOnly = true;
-            this.txtPath1.Size = new System.Drawing.Size(327, 22);
-            this.txtPath1.TabIndex = 26;
-            // 
-            // txtPath2
-            // 
-            this.txtPath2.Location = new System.Drawing.Point(33, 115);
-            this.txtPath2.Name = "txtPath2";
-            this.txtPath2.ReadOnly = true;
-            this.txtPath2.Size = new System.Drawing.Size(327, 22);
-            this.txtPath2.TabIndex = 27;
             // 
             // Form1
             // 
@@ -204,6 +204,7 @@
             this.Name = "Form1";
             this.Text = "NPOI_EXCEL匯出Demo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
